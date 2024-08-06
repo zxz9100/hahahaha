@@ -131,7 +131,15 @@ int Player()
         {
             printf("%s님 차례 : ", name1);
             gets(answer);
-            if (strcmp(answer, "1") == 0 ||  strcmp(answer, "상대") == 0)
+            if (strcmp(answer, "//kill") == 0)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    p[life2] = ' ';
+                    -- life2;
+                }
+            }
+            else if (strcmp(answer, "1") == 0 ||  strcmp(answer, "상대") == 0)
             {
                 if (gun3[Order] == 1)
                 {
@@ -768,7 +776,15 @@ int Player()
         {
             printf("%s님 차례 : ", name2);
             gets(answer);
-            if (strcmp(answer, "1") == 0 ||  strcmp(answer, "상대") == 0)
+            if (strcmp(answer, "//kill") == 0)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    p[life1] = ' ';
+                    -- life1;
+                }
+            }
+            else if (strcmp(answer, "1") == 0 ||  strcmp(answer, "상대") == 0)
             {
                 if (gun3[Order] == 1)
                 {
